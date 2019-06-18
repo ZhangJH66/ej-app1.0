@@ -1,8 +1,18 @@
 import React from 'react';
 import { connect } from 'dva';
-import t from '../assets/yay.jpg'
+import t from '../assets/index.png'
 import styles from './IndexPage.css'
 import axios from '../utils/axios'
+import { NavBar, Icon,Grid  } from 'antd-mobile';
+
+
+const data1 = Array.from(new Array(6)).map((_val, i) => ({
+  icon: 'https://gw.alipayobjects.com/zos/rmsportal/nywPmnTAvTmLusPxHPSu.png',
+  text: `name${i}`,
+  }
+));
+
+
 
 class IndexPage extends React.Component {
   constructor(props){
@@ -10,12 +20,15 @@ class IndexPage extends React.Component {
     this.state = {
       categories:[]
     }
+
+    
   }
 
   // 当前组件绑定到根组件上执行【生命周期钩子】
   componentDidMount(){
     this.loadCategory();
   }
+  
 
   loadCategory(){
     axios.get('/category/findAll')
@@ -33,32 +46,36 @@ class IndexPage extends React.Component {
 
   render(){
     return (
-      <div>
+          
+        <div>
+        <div>
+        <NavBar
+          mode="light"
+          icon={<Icon type="left" />}
+          onLeftClick={() => console.log('onLeftClick')}
+          rightContent={[
+            <Icon key="0" type="search" style={{ marginRight: '16px' }} />,
+            <Icon key="1" type="ellipsis" />,
+          ]}
+          >e洁家政服务平台</NavBar>
+        </div>
+
+        
         {/* 图片广告 */}
         <div className={styles.photoWall}>
           <img className={styles.photo} src={t}/>
         </div>
         {/* 栏目 */}
-        <div>
-          <ul className={styles["category_list"]}>
-            {
-              this.state.categories.map((item)=>{
-                return (
-                  <li 
-                    onClick={this.toProduct.bind(this)} 
-                    key={item.id} 
-                    className={styles["category_list_item"]}>
-                    <div></div>
-                    <div>{item.name}</div>
-                  </li>
-                )
-              })
-            }
-          </ul>
-        </div>
+
+        <div className="sub-title"></div>
+           <Grid data={data1} isCarousel onClick={_el => console.log(_el)} />
+        
+
+
         {/* 产品 */}
         <div>
-  
+
+
         </div>
       </div>
     );

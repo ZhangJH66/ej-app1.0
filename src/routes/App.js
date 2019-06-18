@@ -87,7 +87,7 @@ class App extends React.Component {
                 />
                 }
                 selected={this.state.selectedTab === 'index'}
-                badge={1}
+                //badge={1}
                 onPress={this.handlerTabChange.bind(this,'index')}
                 data-seed="logId"
               >
@@ -109,7 +109,7 @@ class App extends React.Component {
                 }
                 title="订单"
                 key="order"
-                badge={'new'}
+               // badge={'new'}
                 selected={this.state.selectedTab === 'order'}
                 onPress={this.handlerTabChange.bind(this,'order')}
                 data-seed="logId1"
@@ -132,7 +132,7 @@ class App extends React.Component {
                 }
                 title="帮助"
                 key="help"
-                dot
+               // dot
                 selected={this.state.selectedTab === 'help'}
                 onPress={this.handlerTabChange.bind(this,'help')}
               >
