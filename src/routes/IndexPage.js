@@ -70,7 +70,6 @@ class IndexPage extends React.Component {
   }
   // 当前组件绑定到根组件上执行【生命周期钩子】
   componentDidMount(){
-    console.log("====",this.props);
     this.loadCategory();
   }
   loadCategory(){
@@ -82,6 +81,11 @@ class IndexPage extends React.Component {
       })
     });
   }
+
+  toProduct(){
+    this.props.history.push("/product");
+  }
+
   render(){
     return (
           
@@ -98,6 +102,8 @@ class IndexPage extends React.Component {
         <div>
         <div className="sub-title2"></div>
           <Grid data={data1} columnNum={3} itemStyle={{ height: '80px', background: 'rgba(0,0,0,.05)' }} />
+
+
         </div>
       </div>
     );
