@@ -2,15 +2,26 @@ import React from 'react'
 import { NavBar,Menu, Icon,ActivityIndicator,Grid,Tag,Accordion,List} from 'antd-mobile';
 import styles from './HelpPage.css'
 
+import dingdan from "../assets/dingdan.png"
+import kefuduan from "../assets/kefuduan.png"
+import youhui from "../assets/youhui.png"
+import zhifu from "../assets/zhifu.png"
+import shouhou from "../assets/shouhou.png"
+
 const data = [{
+  icon:dingdan,
   text: `订单相关`
 },{
+  icon:kefuduan,
   text: `客服端`
 },{ 
+  icon:youhui,
   text: `优惠劵`
 },{
+  icon:zhifu,
   text: `支付`
 },{
+  icon:shouhou,
   text: `售后处理`
 }
 ]
