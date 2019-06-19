@@ -16,7 +16,25 @@
 
 .category_list_item {
   width: 33%;
-  height: 50%;
+  height: 80px;
   text-align: center;
   padding: 1em 0;
+}
+.sub-title1 {
+  color: #888;
+  font-size: 24px;
+  padding: 25px 0 9px 25px;
+}
+
+.sub-title2 {
+  color: rgb(198, 230, 243);
+  font-size: 24px;
+  padding: 25px 0 9px 25px;
+}
+.not-square-grid {
+  
+}
+.am-grid-icon {
+  width: 60px;
+  height: 60px;
 }

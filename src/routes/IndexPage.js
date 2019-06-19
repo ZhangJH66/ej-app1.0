@@ -1,36 +1,78 @@
 import React from 'react';
 import { connect } from 'dva';
 import t from '../assets/index.png'
+import b from "../assets/baojie.png"
+import k from "../assets/kanhu.png"
+import x from "../assets/xihu.png"
+import y from "../assets/yuesao.png"
+import q from "../assets/qita.png"
+import j from "../assets/jinqing.png"
+import xiyi from "../assets/xiyi.png"
+import xixie from "../assets/xixie.png"
+import youyanji from "../assets/youyanji.png"
+import zhouqibaojie from "../assets/zhouqibaojie.png"
+import jiadianweixiu from "../assets/jiadianweixiu.png"
+
+
 import styles from './IndexPage.css'
 import axios from '../utils/axios'
-import { NavBar, Icon,Grid  } from 'antd-mobile';
-
-
-const data1 = Array.from(new Array(6)).map((_val, i) => ({
-  icon: 'https://gw.alipayobjects.com/zos/rmsportal/nywPmnTAvTmLusPxHPSu.png',
-  text: `name${i}`,
-  }
-));
+import { Grid  } from 'antd-mobile';
 
 
 
+const data = [{
+  icon: x,  
+  text: `洗护`
+},{
+  icon: b,  
+  text: `保洁`
+},{
+  icon: k,  
+  text: `看护`
+},{
+  icon: y,  
+  text: `月嫂`
+},{
+  icon: q,  
+  text: `其他`
+},{
+  icon: j,  
+  text: ``
+}
+]
+
+const data1 = [{
+  icon: xiyi,  
+  text: `洗衣`
+},{
+  icon: xixie,  
+  text: `洗鞋`
+},{
+  icon: youyanji,  
+  text: `清洗油烟机`
+},{
+  icon: zhouqibaojie,  
+  text: `周期保洁`
+},{
+  icon: jiadianweixiu  ,
+  text: `家电维修`
+},{
+  icon: '',  
+  text: `更多热门服务`
+}
+]
 class IndexPage extends React.Component {
   constructor(props){
     super(props)
     this.state = {
       categories:[]
     }
-
-    
   }
-
   // 当前组件绑定到根组件上执行【生命周期钩子】
   componentDidMount(){
     console.log("====",this.props);
     this.loadCategory();
   }
-  
-
   loadCategory(){
     axios.get('/category/findAll')
     .then((result)=>{
@@ -40,44 +82,22 @@ class IndexPage extends React.Component {
       })
     });
   }
-
-
-
   render(){
     return (
           
         <div>
-        <div>
-        <NavBar
-          mode="light"
-          icon={<Icon type="left" />}
-          onLeftClick={() => console.log('onLeftClick')}
-          rightContent={[
-            <Icon key="0" type="search" style={{ marginRight: '16px' }} />,
-            <Icon key="1" type="ellipsis" />,
-          ]}
-          >e洁家政服务平台</NavBar>
-        </div>
-
         
         {/* 图片广告 */}
         <div className={styles.photoWall}>
-          <img className={styles.photo} src={t}/>
+          <img className={styles.photo} src={t} alt="加载失败"/>
         </div>
         {/* 栏目 */}
-
-        <div className="sub-title"></div>
-           <Grid data={data1} isCarousel onClick={_el => console.log(_el)} />
-        
-
-
+        <div className="sub-title1"></div>
+           <Grid data={data} isCarousel onClick={_el => console.log(_el)} />
         {/* 产品 */}
         <div>
-            
-
-
-
-
+        <div className="sub-title2"></div>
+          <Grid data={data1} columnNum={3} itemStyle={{ height: '80px', background: 'rgba(0,0,0,.05)' }} />
         </div>
       </div>
     );
