@@ -1,0 +1,24 @@
+.placeholder {
+  background-color: #ebebef;
+  color: #bbb;
+  text-align: center;
+
+}
+.photo {
+  width: 30%;
+  height: 100%;
+  margin: 0;
+  text-align: center;
+  line-height: 30px;
+}
+.btns1 {
+  margin-bottom: .5em;
+  text-align: center;
+  color:green;
+}
+.btns2 {
+  margin-bottom: .5em;
+  text-align: center;
+  color:blue;
+  
+}
