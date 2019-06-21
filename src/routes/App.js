@@ -149,7 +149,7 @@ class App extends React.Component {
                 selectedIcon={<div style={{
                   width: '22px',
                   height: '22px',
-                  background: 'url(src/assets/首页.png) center center /  21px 21px no-repeat' }}
+                  background: 'url(src/assets/首页1.png) center center /  21px 21px no-repeat' }}
                 />
                 }
                 selected={this.state.selectedTab === 'index'}
@@ -170,7 +170,7 @@ class App extends React.Component {
                   <div style={{
                     width: '22px',
                     height: '22px',
-                    background: 'url(src/assets/档案.png) center center /  21px 21px no-repeat' }}
+                    background: 'url(src/assets/档案1.png) center center /  21px 21px no-repeat' }}
                   />
                 }
                 title="订单"
@@ -193,7 +193,7 @@ class App extends React.Component {
                   <div style={{
                     width: '22px',
                     height: '22px',
-                    background: 'url(src/assets/客服.png) center center /  21px 21px no-repeat' }}
+                    background: 'url(src/assets/客服1.png) center center /  21px 21px no-repeat' }}
                   />
                 }
                 title="帮助"
@@ -205,7 +205,7 @@ class App extends React.Component {
               </TabBar.Item>
               <TabBar.Item
                 icon={{ uri: 'src/assets/我的.png' }}
-                selectedIcon={{ uri: 'src/assets/我的.png' }}
+                selectedIcon={{ uri: 'src/assets/我的1.png' }}
                 title="我的"
                 key="my"
                 selected={this.state.selectedTab === 'my'}

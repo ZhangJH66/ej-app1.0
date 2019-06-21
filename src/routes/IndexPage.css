@@ -20,7 +20,6 @@
   text-align: center;
   padding: 1em 0;
 }
-<<<<<<< HEAD
 .sub-title1 {
   color: #888;
   font-size: 24px;
@@ -32,12 +31,13 @@
   font-size: 24px;
   padding: 25px 0 9px 25px;
 }
-.not-square-grid {
-  
-}
+
 .am-grid-icon {
   width: 60px;
   height: 60px;
 }
-=======
->>>>>>> 13ae8fc7e80412b830ab6a536b5e28ec7f87d808
+.space-carousel {
+  padding: 16px;
+  background: #DEF1E5;
+  overflow: hidden;
+}

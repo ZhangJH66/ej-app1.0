@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon,NavBar,Tabs, WhiteSpace,Badge} from 'antd-mobile';
+import { Tabs, WhiteSpace,Badge} from 'antd-mobile';
 
 
 
@@ -62,13 +62,7 @@ class OrderPage extends React.Component {
     );
     return(
       <div>
-        <NavBar
-       rightContent={[
-         <Icon key="0" type="search" style={{ marginRight: '16px' }} />,
-                    <Icon key="1" type="ellipsis" />,]}
-        >
-       订单信息
-        </NavBar>
+        
         <TabExample>
         </TabExample>
         </div>

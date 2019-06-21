@@ -92,7 +92,7 @@ class IndexPage extends React.Component {
         <div>
         
         {/* 图片广告 */}
-        <div className={styles.photoWall}>
+        <div >
           <img className={styles.photo} src={t} alt="加载失败"/>
         </div>
         {/* 栏目 */}
